@@ -3,4 +3,4 @@ kind: Kustomization
 
 resources:
   - hello-world.yaml
-  - goodbye-world.yaml
+  #- goodbye-world.yaml
