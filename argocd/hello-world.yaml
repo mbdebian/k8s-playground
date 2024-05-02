@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/mbdebian/playground-k8s.git
     targetRevision: main
-    path: app/overlays/main/kustomization.yaml
+    path: app/overlays/main
   destination:
     namespace: playground-k8s
     server: https://kubernetes.default.svc
