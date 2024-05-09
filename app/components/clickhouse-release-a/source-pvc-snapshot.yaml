@@ -4,6 +4,6 @@ metadata:
   name: clickhouse-snapshot
   namespace: default
 spec:
-  #volumeSnapshotClassName: your-snapshot-class
+  volumeSnapshotClassName: data-backend
   source:
     persistentVolumeClaimName: platform-clickhouse
