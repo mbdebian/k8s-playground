@@ -6,6 +6,7 @@ metadata:
     app: clickhouse
     tier: storage
 spec:
+  storageClassName: data-backend
   capacity:
     storage: 64Gi
   accessModes:
