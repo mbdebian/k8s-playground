@@ -51,12 +51,12 @@ spec:
         requests:
           storage: 64Gi
       dataSource:
-        #kind: VolumeSnapshot
-        #name: clickhouse-snapshot
-        #apiGroup: snapshot.storage.k8s.io
-        kind: PersistentVolumeClaim
-        name: platform-clickhouse
-        apiGroup: ""
+        kind: VolumeSnapshot
+        name: clickhouse-snapshot
+        apiGroup: snapshot.storage.k8s.io
+        #kind: PersistentVolumeClaim
+        #name: platform-clickhouse
+        #apiGroup: ""
   persistentVolumeClaimRetentionPolicy:
     whenDeleted: Delete
     whenScaled: Retain
