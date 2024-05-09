@@ -6,4 +6,4 @@ resources:
   - source-pv.yaml
   - source-pvc.yaml
   - source-pvc-snapshot.yaml
-  - clickhouse.yaml
+  #- clickhouse.yaml
