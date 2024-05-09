@@ -13,7 +13,7 @@ spec:
     - ReadWriteOnce
   claimRef:
     name: platform-clickhouse
-    namespace: default
+    namespace: playground-k8s
   csi:
     driver: pd.csi.storage.gke.io
     volumeHandle: projects/open-targets-eu-dev/zones/europe-west1-d/disks/data-clickhouse
