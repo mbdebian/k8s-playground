@@ -2,7 +2,7 @@ apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshot
 metadata:
   name: clickhouse-snapshot
-  #namespace: playground-k8s
+  namespace: {{ namespace }}
 spec:
   volumeSnapshotClassName: data-backend
   source:
