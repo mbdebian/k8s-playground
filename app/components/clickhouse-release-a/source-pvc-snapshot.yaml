@@ -1,0 +1,9 @@
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: clickhouse-snapshot
+  namespace: default
+spec:
+  #volumeSnapshotClassName: your-snapshot-class
+  source:
+    persistentVolumeClaimName: platform-clickhouse
