@@ -53,7 +53,7 @@ spec:
       dataSource:
         kind: VolumeSnapshot
         name: clickhouse-snapshot
-        apiGroup: ""
+        apiGroup: snapshot.storage.k8s.io
   persistentVolumeClaimRetentionPolicy:
     whenDeleted: Delete
     whenScaled: Retain
