@@ -5,5 +5,5 @@ resources:
   - gce-disk.yaml
   - source-pv.yaml
   - source-pvc.yaml
-  #- source-pvc-snapshot.yaml
+  - source-pvc-snapshot.yaml
   #- clickhouse.yaml
