@@ -5,5 +5,5 @@ resources:
   - ../../base
 
 components:
-  - ../../components/clickhouse-release-a
+  #- ../../components/clickhouse-release-a
   - ../../components/storage
