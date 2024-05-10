@@ -26,9 +26,9 @@ vars:
 
 resources:
   - environment.yaml
-  #- gce-disk.yaml
-  #- source-pv.yaml
-  #- source-pvc.yaml
+  - gce-disk.yaml
+  - source-pv.yaml
+  - source-pvc.yaml
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
 
