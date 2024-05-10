@@ -8,7 +8,7 @@ configMapGenerator:
   - environment.env
 - name: anotherenv
   literals:
-    - namespace=$(CTX_DEPLOYMENT_NAMESPACE)
+    - namespace=$(ARGOCD_APP_NAMESPACE)
 
 
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
@@ -17,13 +17,13 @@ generatorOptions:
 
 # Extract the variables out of the ConfigMap and into Kustomize variables
 vars:
-- name: CTX_DEPLOYMENT_NAMESPACE
+- name: ARGOCD_APP_NAMESPACE
   objref:
     kind: ConfigMap
     name: environment
     apiVersion: v1
   fieldref:
-    fieldpath: data.CTX_DEPLOYMENT_NAMESPACE
+    fieldpath: data.ARGOCD_APP_NAMESPACE
 
 resources:
   - environment.yaml
@@ -32,3 +32,6 @@ resources:
   #- source-pvc.yaml
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
+
+configurations:
+  - namespace.yaml
