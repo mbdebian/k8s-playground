@@ -8,7 +8,16 @@ configMapGenerator:
   - environment.env
 - name: anotherenv
   literals:
-    - namespace={{ .namespace }}
+    - namespace=mierda
+
+patches:
+  - target:
+    kind: ConfigMap
+    name: anotherenv
+  patch: |-
+    - op: replace
+      path: /data/namespace
+      value: ${ARGOCD_APP_NAMESPACE}
 
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
 generatorOptions:
