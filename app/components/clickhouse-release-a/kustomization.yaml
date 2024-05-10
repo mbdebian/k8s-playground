@@ -9,12 +9,10 @@ resources:
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
 
-replacements:
-  - source:
-      fieldPath: namespace
-    targets:
-    - select:
-        kind: ConfigMap
-        name: clickhouse-release-env
-      fieldPaths:
-      - data.namespace
+configMapGenerator:
+- name: namespace
+  literals: 
+    - namespace=$(NAMESPACE)
+
+configurations:
+- kustomizationconfig.yaml
