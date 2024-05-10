@@ -1,29 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1alpha1
 kind: Component
 
-# The `environment` ConfigMap contains all of the environment variables captured by Kustomize
-configMapGenerator:
-- name: environment
-  envs:
-  - environment.env
-- name: anotherenv
-  literals:
-    - namespace=$(ARGOCD_APP_NAMESPACE)
-
-# Disabling the name suffix hash is required, or `vars` won't lookup the correct name
-generatorOptions:
-  disableNameSuffixHash: true
-
-# Extract the variables out of the ConfigMap and into Kustomize variables
-vars:
-- name: ARGOCD_APP_NAMESPACE
-  objref:
-    kind: ConfigMap
-    name: environment
-    apiVersion: v1
-  fieldref:
-    fieldpath: data.ARGOCD_APP_NAMESPACE
-
 resources:
   - environment.yaml
   #- gce-disk.yaml
