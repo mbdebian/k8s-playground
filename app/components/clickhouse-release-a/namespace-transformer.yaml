@@ -1,5 +1,0 @@
-namespace:
-- kind: ConfigMap
-  path: data/namespace
-  name: clickhouse-release-env
-  create: true
