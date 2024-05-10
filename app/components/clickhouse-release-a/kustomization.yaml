@@ -27,12 +27,11 @@ vars:
 
 resources:
   - environment.yaml
-  - namespace-transformer.yaml
   #- gce-disk.yaml
   #- source-pv.yaml
   #- source-pvc.yaml
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
 
-#configurations:
-#  - namespace.yaml
+configurations:
+  - namespace-transformer.yaml
