@@ -11,6 +11,8 @@ spec:
     repoURL: https://github.com/mbdebian/playground-k8s.git
     targetRevision: main
     path: app/overlays/main
+    kustomize:
+      commonAnnotationsEnvsubst: true
   destination:
     namespace: playground-k8s
     server: https://kubernetes.default.svc
