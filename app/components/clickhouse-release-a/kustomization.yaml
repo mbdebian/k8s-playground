@@ -8,19 +8,8 @@ configMapGenerator:
   - environment.env
 - name: anotherenv
   literals:
-    - namespace=mierda
+    - namespace=$(CTX_DEPLOYMENT_NAMESPACE)
 
-replacements:
-- source:
-  name: anotherenv
-  kind: ConfigMap
-  version: v1
-  targets:
-  - select:
-      name: environment
-      kind: ConfigMap
-    fieldPaths:
-      - data.namespace = metadata.namespace
 
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
 generatorOptions:
