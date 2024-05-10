@@ -14,7 +14,7 @@ replacements:
   - source:
     kind: ConfigMap
     name: anotherenv
-  targets:
+    targets:
     - select:
         kind: ConfigMap
         name: environment
