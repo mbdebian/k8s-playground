@@ -1,0 +1,4 @@
+namespace:
+  - kind: ConfigMap
+    path: data/namespace
+    create: true
