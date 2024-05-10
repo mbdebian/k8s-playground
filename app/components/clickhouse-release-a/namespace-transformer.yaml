@@ -1,11 +1,5 @@
-apiVersion: builtin
-kind: NamespaceTransformer
-metadata:
-  name: not-important-to-example
-setRoleBindingSubjects: none
-#unsetOnly: true
-fieldSpecs:
-- path: data/namespace
-  kind: ConfigMap
+namespace:
+- kind: ConfigMap
+  path: data/namespace
   name: clickhouse-release-env
   create: true
