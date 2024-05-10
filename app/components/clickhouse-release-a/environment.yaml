@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: clickhouse-release-env
 data:
-  namespace: mierda_no_funciona
+  test: no_value
