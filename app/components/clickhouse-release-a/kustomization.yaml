@@ -15,8 +15,8 @@ replacements:
       name: clickhouse-release-env
       fieldPath: metadata.namespace
     targets:
-      - select:
-          kind: ConfigMap
-          name: clickhouse-release-env
-          fieldPaths:
-            - data.namespace
+    - select:
+        kind: ConfigMap
+        name: clickhouse-release-env
+      fieldPaths:
+      - data.namespace
