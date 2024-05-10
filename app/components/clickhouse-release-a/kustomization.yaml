@@ -11,9 +11,7 @@ resources:
 
 replacements:
   - source:
-      kind: ConfigMap
-      name: clickhouse-release-env
-      fieldPath: metadata.namespace
+      fieldPath: namespace
     targets:
     - select:
         kind: ConfigMap
