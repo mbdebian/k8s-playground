@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: clickhouse-release-env
-data:
-  test: $(ARGOCD_APP_NAMESPACE)
-  testb: ${ARGOCD_APP_NAMESPACE}
-  testc: .namespace
-  namespace: "${CTXT_DEPLOYMENT_NAMESPACE}"
