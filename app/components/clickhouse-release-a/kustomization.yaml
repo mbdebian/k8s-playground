@@ -27,6 +27,7 @@ vars:
 
 resources:
   - environment.yaml
+  - namespace-transformer.yaml
   #- gce-disk.yaml
   #- source-pv.yaml
   #- source-pvc.yaml
