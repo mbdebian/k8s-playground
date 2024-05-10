@@ -33,5 +33,5 @@ resources:
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
 
-configurations:
-  - namespace.yaml
+#configurations:
+#  - namespace.yaml
