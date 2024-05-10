@@ -6,6 +6,9 @@ configMapGenerator:
 - name: environment
   envs:
   - environment.env
+- name: anotherenv
+  literals:
+    - namespace=${ARGOCD_APP_NAMESPACE}
 
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
 generatorOptions:
