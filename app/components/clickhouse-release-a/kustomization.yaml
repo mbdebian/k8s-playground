@@ -14,14 +14,13 @@ replacements:
   - source:
     kind: ConfigMap
     name: anotherenv
-    fieldPath: metadata.namespace
   targets:
     - select:
         kind: ConfigMap
         name: environment
-    fieldPaths:
-      - data.namespace
-      
+      fieldPaths:
+        - data.namespace = metadata.namespace
+
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
 generatorOptions:
   disableNameSuffixHash: true
