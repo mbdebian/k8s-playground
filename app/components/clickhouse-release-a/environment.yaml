@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: clickhouse-release-env
 data:
-  namespace: $(NAMESPACE)  # This will be overridden by ArgoCD or set dynamically
+  namespace: $(ARGOCD_APP_NAMESPACE)

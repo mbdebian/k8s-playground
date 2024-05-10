@@ -8,11 +8,3 @@ resources:
   #- source-pvc.yaml
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
-
-configMapGenerator:
-- name: namespace
-  literals: 
-    - namespace=$(NAMESPACE)
-
-configurations:
-- kustomizationconfig.yaml
