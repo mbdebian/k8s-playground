@@ -17,13 +17,13 @@ generatorOptions:
 
 # Extract the variables out of the ConfigMap and into Kustomize variables
 vars:
-- name: ARGOCD_APP_NAMESPACE
+- name: CTX_DEPLOYMENT_NAMESPACE
   objref:
     kind: ConfigMap
     name: environment
     apiVersion: v1
   fieldref:
-    fieldpath: data.ARGOCD_APP_NAMESPACE
+    fieldpath: data.CTX_DEPLOYMENT_NAMESPACE
 
 resources:
   - environment.yaml
