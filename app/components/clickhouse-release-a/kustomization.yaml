@@ -8,3 +8,20 @@ resources:
   #- source-pvc.yaml
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
+
+configMapGenerator:
+  - name: clickhouse-release-env
+    literals:
+      - namespace=ARGOCD_NAMESPACE  # ArgoCD can dynamically replace this
+
+vars:
+  - name: ARGOCD_NAMESPACE
+    objref:
+      kind: ConfigMap
+      name: clickhouse-release-env
+      apiVersion: v1
+    fieldref:
+      fieldpath: data.namespace
+
+configurations:
+  - environment.yaml
