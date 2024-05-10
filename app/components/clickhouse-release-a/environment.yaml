@@ -5,5 +5,5 @@ metadata:
 data:
   test: $(ARGOCD_APP_NAMESPACE)
   testb: ${ARGOCD_APP_NAMESPACE}
-  testc: { .namespace }
+  testc: .namespace
   namespace: "${CTXT_DEPLOYMENT_NAMESPACE}"
