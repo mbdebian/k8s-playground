@@ -10,15 +10,18 @@ configMapGenerator:
   literals:
     - namespace=mierda
 
-patches:
-  - target:
+replacements:
+  - source:
     kind: ConfigMap
     name: anotherenv
-  patch: |-
-    - op: replace
-      path: /data/namespace
-      value: ${ARGOCD_APP_NAMESPACE}
-
+    fieldPath: metadata.namespace
+  targets:
+    - select:
+        kind: ConfigMap
+        name: environment
+    fieldPaths:
+      - data.namespace
+      
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
 generatorOptions:
   disableNameSuffixHash: true
