@@ -11,9 +11,9 @@ spec:
     storage: 64Gi
   accessModes:
     - ReadWriteOnce
-  claimRef:
-    name: platform-clickhouse
-    namespace: playground-k8s # this needs to be here, otherwise, the PVC will contain no data
+  #claimRef:
+    #name: platform-clickhouse
+    #namespace: playground-k8s # this needs to be here, otherwise, the PVC will contain no data
   csi:
     driver: pd.csi.storage.gke.io
     volumeHandle: projects/open-targets-eu-dev/zones/europe-west1-d/disks/data-clickhouse
