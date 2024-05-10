@@ -10,7 +10,7 @@ resources:
   #- clickhouse.yaml
 
 replacements:
-  - sourceRef:
+  - source:
       kind: ConfigMap
       name: clickhouse-release-env
       fieldPath: metadata.namespace
