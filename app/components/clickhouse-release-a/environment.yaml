@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clickhouse-release-env
+data:
+  namespace: placeholder-namespace  # This will be overridden by ArgoCD or set dynamically
