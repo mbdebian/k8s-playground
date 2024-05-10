@@ -10,7 +10,6 @@ configMapGenerator:
   literals:
     - namespace=$(ARGOCD_APP_NAMESPACE)
 
-
 # Disabling the name suffix hash is required, or `vars` won't lookup the correct name
 generatorOptions:
   disableNameSuffixHash: true
@@ -33,5 +32,5 @@ resources:
   #- source-pvc-snapshot.yaml
   #- clickhouse.yaml
 
-configurations:
-  - namespace-transformer.yaml
+#configurations:
+#  - namespace-transformer.yaml

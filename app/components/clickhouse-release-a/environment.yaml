@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: clickhouse-release-env
 data:
-  test: no_value
+  test: $(ARGOCD_APP_NAMESPACE)
+  namespace: "${CTXT_DEPLOYMENT_NAMESPACE}"
