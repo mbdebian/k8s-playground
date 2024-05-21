@@ -8,4 +8,4 @@ components:
   - ../../components/clickhouse-release-a
   - ../../components/storage
 
-namePrefix: dev-
+namePrefix: ptdev-
