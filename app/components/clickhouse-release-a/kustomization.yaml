@@ -5,7 +5,7 @@ resources:
   #- stack-configuration.yaml
   - disk.yaml
   - pv.yaml
-  #- pvc.yaml
+  - pvc.yaml
   #- snapshot.yaml
   #- application.yaml
 
