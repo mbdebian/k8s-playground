@@ -4,7 +4,7 @@ kind: Component
 resources:
   #- stack-configuration.yaml
   - disk.yaml
-  #- pv.yaml
+  - pv.yaml
   #- pvc.yaml
   #- snapshot.yaml
   #- application.yaml
@@ -21,3 +21,5 @@ resources:
   #    labelSelector: stack=clickhouse
   #  options:
   #    allowNameChange: true
+#  configurations:
+#    - name-reference-pv.yaml
