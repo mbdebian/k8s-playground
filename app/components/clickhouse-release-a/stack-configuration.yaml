@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clickhouse-stack-configuration
+data:
+  envs:
+    - name: imageId
+      valueFrom:
+        configMapKeyRef:
+          name: clickhouse-release
+          key: imageId
