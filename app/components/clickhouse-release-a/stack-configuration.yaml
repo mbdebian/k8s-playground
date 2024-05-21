@@ -3,9 +3,4 @@ kind: ConfigMap
 metadata:
   name: clickhouse-stack-configuration
 data:
-  envs:
-    - name: imageId
-      valueFrom:
-        configMapKeyRef:
-          name: clickhouse-release
-          key: imageId
+  testName: hello
