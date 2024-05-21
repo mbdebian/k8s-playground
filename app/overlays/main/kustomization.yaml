@@ -9,4 +9,4 @@ components:
   - ../../components/clickhouse-release-a
   - ../../components/storage
 
-namePrefix: ptdev-
+#namePrefix: ptdev-
