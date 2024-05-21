@@ -52,3 +52,12 @@ spec:
     requests:
       storage: 64Gi
 ---
+apiVersion: snapshot.storage.k8s.io/v1
+kind: VolumeSnapshot
+metadata:
+  name: OT_OPS_STACK_NAME
+spec:
+  volumeSnapshotClassName: data-backend
+  source:
+    persistentVolumeClaimName: OT_OPS_STACK_NAME
+---
