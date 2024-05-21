@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: platform-clickhouse-b
+  name: platform-clickhouse
   labels:
     app: clickhouse
     tier: storage
