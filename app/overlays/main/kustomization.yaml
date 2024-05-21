@@ -7,3 +7,6 @@ resources:
 components:
   - ../../components/clickhouse-release-a
   - ../../components/storage
+
+spec:
+  namePrefix: platform-dev
