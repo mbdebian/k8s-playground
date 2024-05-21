@@ -10,9 +10,14 @@ resources:
   #- application.yaml
 
 patches:
-  - path: patch-disk.yaml
+  #- path: patch-disk.yaml
+  #  target:
+  #    kind: Disk
+  #    name: data-clickhouse
+  #  options:
+  #    allowNameChange: true
+  - path: patch-stack-name.yaml
     target:
-      kind: Disk
-      name: data-clickhouse
+      labelSelector: stack=clickhouse
     options:
       allowNameChange: true
