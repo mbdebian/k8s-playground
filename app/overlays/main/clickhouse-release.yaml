@@ -5,3 +5,5 @@ metadata:
 data:
   imageId: projects/open-targets-eu-dev/global/images/posdevpf-20240423-0841-ch
   diskProjectId: open-targets-eu-dev
+  diskZone: europe-west1-d
+  stackName: ch-stack-name

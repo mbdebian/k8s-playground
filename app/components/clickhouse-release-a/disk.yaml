@@ -8,6 +8,7 @@ metadata:
     subteam: backend
     product: platform
     environment: development
+    stack: clickhouse
   name: data-clickhouse
 spec:
   deletionPolicy: Delete
