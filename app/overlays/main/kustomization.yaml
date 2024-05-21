@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../base
+  - clickhouse-release.yaml
 
 components:
   - ../../components/clickhouse-release-a
