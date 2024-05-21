@@ -12,7 +12,6 @@ patches:
   - path: patch-disk.yaml
     target:
       kind: Disk
-      apiVersion: compute.gcp.upbound.io/v1beta1
       name: data-clickhouse
     options:
       allowNameChange: true
