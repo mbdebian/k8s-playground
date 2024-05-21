@@ -8,4 +8,4 @@ components:
   - ../../components/clickhouse-release-a
   - ../../components/storage
 
-namePrefix: platform-dev
+namePrefix: dev-
