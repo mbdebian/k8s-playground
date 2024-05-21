@@ -3,7 +3,7 @@ kind: Component
 
 resources:
   - disk.yaml
-  - pv.yaml
-  - pvc.yaml
-  - snapshot.yaml
-  - application.yaml
+  #- pv.yaml
+  #- pvc.yaml
+  #- snapshot.yaml
+  #- application.yaml
