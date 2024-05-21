@@ -18,3 +18,20 @@ spec:
     type: pd-balanced
     image: OT_OPS_DISK_IMAGE_ID
 ---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: OT_OPS_STACK_NAME
+  labels:
+    app: clickhouse
+    tier: storage
+spec:
+  storageClassName: data-backend
+  capacity:
+    storage: 64Gi
+  accessModes:
+    - ReadWriteOnce
+  csi:
+    driver: pd.csi.storage.gke.io
+    volumeHandle: OT_OPS_DISK_ID
+    fsType: ext4
