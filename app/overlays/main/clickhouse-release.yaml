@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clickhouse-release
+data:
+  imageId: projects/open-targets-eu-dev/global/images/posdevpf-20240423-0841-ch
+  diskProjectId: open-targets-eu-dev
