@@ -35,3 +35,20 @@ spec:
     driver: pd.csi.storage.gke.io
     volumeHandle: OT_OPS_DISK_ID
     fsType: ext4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: OT_OPS_STACK_NAME
+  labels:
+    app: clickhouse
+    tier: storage
+spec:
+  storageClassName: data-backend
+  volumeName: OT_OPS_STACK_NAME
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 64Gi
+---
