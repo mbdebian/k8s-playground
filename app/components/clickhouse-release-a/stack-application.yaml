@@ -3,25 +3,25 @@ kind: StatefulSet
 metadata:
   name: ch-platform-b
   labels:
-    app: ch-platform
+    app: clickhouse
     tier: backend
 spec:
-  serviceName: ch-platform
+  serviceName: clickhouse
   replicas: 3
   selector:
     matchLabels:
-      app: ch-platform
+      app: clickhouse
       tier: backend
   template:
     metadata:
       labels:
-        app: ch-platform
+        app: clickhouse
         tier: backend
     spec:
       # This allowance here is a hack to allow for the new cluster to be created before the old one is deleted
       terminationGracePeriodSeconds: 360
       containers:
-      - name: ch-platform
+      - name: clickhouse
         image: clickhouse/clickhouse-server:23.3.1.2823
         imagePullPolicy: Always
         lifecycle:
