@@ -1,0 +1,19 @@
+apiVersion: compute.gcp.upbound.io/v1beta1
+kind: Disk
+metadata:
+  annotations:
+    meta.upbound.io/example-id: compute/v1beta1/disk
+  labels:
+    team: open-targets
+    subteam: backend
+    # I will need a patch in the overlay to modify values like 'product' and 'environment'
+    product: platform
+    environment: development
+  name: OT_OPS_STACK_NAME
+spec:
+  deletionPolicy: Delete
+  forProvider:
+    project: open-targets-eu-dev
+    zone: europe-west1-d
+    type: pd-balanced
+    image: OT_OPS_DISK_IMAGE_ID
