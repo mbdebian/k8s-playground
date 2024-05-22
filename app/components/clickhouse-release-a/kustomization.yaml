@@ -20,5 +20,5 @@ resources:
   #    labelSelector: stack=clickhouse
   #  options:
   #    allowNameChange: true
-configurations:
-  - name-reference-pv.yaml
+#configurations:
+#  - name-reference-pv.yaml
