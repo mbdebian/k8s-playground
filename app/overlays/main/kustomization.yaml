@@ -6,7 +6,7 @@ resources:
   - clickhouse-release.yaml
 
 components:
-  - ../../components/clickhouse-release-a
-  - ../../components/storage
+  #- ../../components/clickhouse-release-a
+  #- ../../components/storage
 
 #namePrefix: ptdev-
